@@ -1,0 +1,14 @@
+<h1>Page de  recherche</h1>
+{{ form(f) }}
+<table border="1">
+    <tr>
+        <td>Id</td><td>Libelle</td><td>pays</td>
+    </tr>
+    {%  for i in m %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.libelle }}</td>
+            <td>{{ i.pays }}</td>
+              </tr>
+    {%  endfor %}
+</table>

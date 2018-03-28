@@ -1,0 +1,16 @@
+<h1>Ajout 2em Methode !!!</h1>
+
+{{ form_start(f) }}
+<table>
+    <tr><td>Libelle:</td>
+    <td>{{ form_widget(f.libelle) }}</td>
+    </tr>
+    <tr><td>pays:</td>
+        <td>{{ form_widget(f.pays) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_widget(f.valider) }}</td>
+    </tr>
+
+</table>
+{{ form_end(f) }}

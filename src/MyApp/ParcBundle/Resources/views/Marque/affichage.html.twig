@@ -1,0 +1,15 @@
+<h1>affichage des marques !</h1>
+<table border="1">
+    <tr>
+        <td>Id</td><td>Libelle</td><td>pays</td>
+    </tr>
+    {%  for i in m %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.libelle }}</td>
+            <td>{{ i.pays }}</td>
+            <td><a href="{{ path('supp',{'p':i.id}) }}">supprimer ici</a> </td>
+            <td><a href="{{ path('modif',{'p':i.id}) }}">modifier ici</a> </td>
+        </tr>
+    {%  endfor %}
+</table>

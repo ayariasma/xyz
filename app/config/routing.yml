@@ -1,0 +1,11 @@
+my_app_parc:
+    resource: "@MyAppParcBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_app_user:
+    resource: "@MyAppUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

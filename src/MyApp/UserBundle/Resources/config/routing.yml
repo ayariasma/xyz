@@ -1,0 +1,15 @@
+my_app_user_homepage:
+    path:     /test
+    defaults: { _controller: MyAppUserBundle:Default:index }
+balalalalallalal:
+    path:     /page1
+    defaults: { _controller: MyAppUserBundle:Etudiant:test }
+page2_page:
+    path:     /page2/{name}
+    defaults: { _controller: MyAppUserBundle:Etudiant:page2 }
+page3_page:
+    path:     /page3
+    defaults: { _controller: MyAppUserBundle:Etudiant:listE }
+page4_page:
+    path:     /details
+    defaults: { _controller: MyAppUserBundle:Etudiant:details }

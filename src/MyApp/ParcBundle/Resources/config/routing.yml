@@ -1,0 +1,27 @@
+my_app_parc_homepage:
+    path:     /
+    defaults: { _controller: MyAppParcBundle:Default:index }
+
+_ajout:
+    path:     /Ajout
+    defaults: { _controller: MyAppParcBundle:Marque:Ajout }
+
+PageAffichage:
+    path:     /affichage
+    defaults: { _controller: MyAppParcBundle:Marque:affichage }
+ajout2:
+    path:     /ajout2
+    defaults: { _controller: MyAppParcBundle:Marque:ajout2 }
+supp:
+    path:     /delete/{p}
+    defaults: { _controller: MyAppParcBundle:Marque:delete }
+modif:
+    path:     /update/{p}
+    defaults: { _controller: MyAppParcBundle:Marque:update }
+search:
+    path:     /search
+    defaults: { _controller: MyAppParcBundle:Marque:search }
+
+Ajax:
+    path:     /searchAjax
+    defaults: { _controller: MyAppParcBundle:Marque:searchAjax }

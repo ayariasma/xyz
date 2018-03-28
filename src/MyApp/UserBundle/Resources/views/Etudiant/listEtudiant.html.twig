@@ -1,0 +1,22 @@
+<h1>list des etudiants </h1>
+<ul>
+    {%  for i in e %}
+        <li>{{ i }}</li>
+    {%  endfor %}
+</ul>
+<h3>Matrice !!!</h3>
+<table border="1">
+        <tr>
+                <td>Id</td>
+                <td>Nom</td>
+                <td>Age</td>
+        </tr>
+        {%  for j in list %}
+                <tr>
+                 <td>{{ j.id}}</td>
+                 <td>{{ j.nom}}</td>
+                 <td>{{ j.Age}}</td>
+                <td><a href="{{ path('page4_page',j) }}">details</a> </td>
+                </tr>
+        {%  endfor %}
+</table>

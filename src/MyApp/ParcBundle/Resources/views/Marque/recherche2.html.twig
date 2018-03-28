@@ -1,0 +1,106 @@
+afficher <br>
+<div id="div">
+</div>
+{{ form_start(form) }}
+{{ form_widget(form.libelle) }}
+{{ form_widget(form.search) }}
+{{ form_end(form) }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="affichage">
+    <table border="1">
+        <tr>
+            <td>Id</td><td>Libelle</td><td>pays</td>
+        </tr>
+        {% for i in marques %}
+
+            <tr>
+                <td>{{ i.id}}</td>
+                <td>{{ i.libelle}}</td>
+                <td>{{ i.pays}}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+
+</div>
+{#{{ form_start(form) }}
+{{ form_widget(form.libelle,{'id':'form_libelle','name':'libelle'}) }}
+{{ form_widget(form.search) }}
+{{ form_end(form) }}#}
+
+<script src="{{ asset('js/jquery-3.3.1.js') }}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    $("#test_libelle").keyup(
+
+        function(){
+
+            var X=$('#test_libelle').val();
+            console.log(libelle);
+            var DATA =  {'libelle' : X};
+            $.ajax({
+                type: "POST",
+                url: "{{ path('Ajax')}}",
+                data:DATA,
+                success: function (data) {
+                    console.log(data);
+                    $( "#div" ).html("<table id='res' border='1'></table>");
+                    $.each(data,function(k,el) {
+                        $("#affichage").hide();
+                        $('#res').append(
+                            "<tr>"+
+                            "<td>"+el.libelle+"</td>"+
+                            "<td>"+el.pays+"</td>"
+                            +"</tr>"
+                        );
+                    });
+                },
+                error:function()
+                {
+                    console.log('koo');
+                }
+            });
+        });
+
+</script>
